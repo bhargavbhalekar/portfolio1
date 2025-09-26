@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: bhargav-portfolio-backend
+    env: docker
+    plan: free
+    dockerfilePath: backend/Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: config.settings
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: false
+      - key: ALLOWED_HOSTS
+        value: bhargav-portfolio-backend.onrender.com
+
+  - type: static
+    name: bhargav-portfolio-frontend
+    plan: free
+    buildCommand: npm ci && npm run build --prefix frontend
+    staticPublishPath: frontend/dist
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
