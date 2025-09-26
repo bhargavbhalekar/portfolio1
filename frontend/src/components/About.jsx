@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
+const base = import.meta.env.BASE_URL || '/'
+
 export default function About() {
-  const candidates = ['/profile.jpg','/profile.jpeg','/profile.png','/profile.webp','/profile.svg']
+  const candidates = [`${base}profile.jpg`,`${base}profile.jpeg`,`${base}profile.png`,`${base}profile.webp`,`${base}profile.svg`]
   const [idx, setIdx] = useState(0)
   const src = candidates[idx]
   return (
@@ -18,7 +20,7 @@ export default function About() {
           <div className="mt-4 flex gap-3 text-sm">
             <a href="#projects" className="px-3 py-2 rounded border border-red-200">See projects</a>
             <a href="#contact" className="px-3 py-2 rounded bg-[var(--primary)] text-white">Let’s talk</a>
-            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="px-3 py-2 rounded border border-red-200">View Resume</a>
+            <a href={`${base}resume.pdf`} target="_blank" rel="noreferrer" className="px-3 py-2 rounded border border-red-200">View Resume</a>
           </div>
         </div>
       </div>

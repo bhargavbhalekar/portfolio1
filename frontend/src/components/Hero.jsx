@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 
+const base = import.meta.env.BASE_URL || '/'
+
 export default function Hero() {
 
   return (
@@ -7,7 +9,7 @@ export default function Hero() {
       <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full blur-3xl opacity-30" style={{background: 'radial-gradient(circle,var(--primary),transparent)'}} />
       <div className="container mx-auto px-6">
         <motion.div initial={{opacity:0, y:10}} animate={{opacity:1,y:0}} transition={{duration:0.6}}>
-          <img src="/signature.svg" alt="Bhargav signature" className="w-48 mb-4" />
+          <img src={`${base}signature.svg`} alt="Bhargav signature" className="w-48 mb-4" />
           <h1 className="text-4xl md:text-6xl font-serif font-extrabold leading-tight">
             Hi, I’m <span className="text-[var(--primary)]">Bhargav Bhalekar</span>
           </h1>
@@ -17,7 +19,7 @@ export default function Hero() {
           <div className="mt-6 flex gap-3">
             <a href="#projects" className="px-4 py-2 rounded bg-[var(--primary)] text-white text-sm">View Projects</a>
             <a href="#contact" className="px-4 py-2 rounded border border-red-200 text-sm">Contact</a>
-            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="px-4 py-2 rounded border border-red-200 text-sm">View Resume</a>
+            <a href={`${base}resume.pdf`} target="_blank" rel="noreferrer" className="px-4 py-2 rounded border border-red-200 text-sm">View Resume</a>
           </div>
         </motion.div>
 
@@ -26,7 +28,7 @@ export default function Hero() {
             <p className="text-sm text-gray-700">Open to Frontend / Full‑stack roles · Remote‑friendly</p>
             <div className="mt-3 flex gap-2">
               <a href="#contact" className="px-3 py-1 rounded border text-sm">Contact</a>
-              <a href="/resume.pdf" target="_blank" rel="noreferrer" className="px-3 py-1 rounded bg-[var(--primary)] text-white text-sm">Resume</a>
+              <a href={`${base}resume.pdf`} target="_blank" rel="noreferrer" className="px-3 py-1 rounded bg-[var(--primary)] text-white text-sm">Resume</a>
             </div>
           </WidgetCard>
 

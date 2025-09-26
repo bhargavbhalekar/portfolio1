@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+const base = import.meta.env.BASE_URL || '/'
+
 export default function Nav() {
   const [open, setOpen] = useState(false)
   const items = [
@@ -18,7 +20,7 @@ export default function Nav() {
           {items.map(i => (
             <li key={i.href}><a className="link-underline" href={i.href}>{i.label}</a></li>
           ))}
-          <li><a className="link-underline" href="/resume.pdf" target="_blank" rel="noreferrer">Resume</a></li>
+          <li><a className="link-underline" href={`${base}resume.pdf`} target="_blank" rel="noreferrer">Resume</a></li>
         </ul>
       </nav>
       {open && (
