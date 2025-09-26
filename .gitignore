@@ -1,0 +1,33 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Node / Vite
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.log
+
+# Python / Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+backend/staticfiles/
+.venv/
+venv/
+.env
+.env.*
+backend/.env
+backend/.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# Coverage / pytest
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Docker
+*.local

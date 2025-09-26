@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #E63946;
+}
+
+html, body, #root { height: 100%; }
+html { scroll-behavior: smooth; }
+body { font-family: Inter, system-ui, sans-serif; }
+
+.section-title {
+  @apply text-3xl md:text-4xl font-serif font-bold mb-6;
+}
+.link-underline {
+  background-image: linear-gradient(#E63946,#E63946);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size .3s ease;
+}
+.link-underline:hover { background-size: 100% 2px; }

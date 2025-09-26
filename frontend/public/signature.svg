@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" viewBox="0 0 300 80" fill="none">
+  <path d="M10 50 Q 60 10, 110 50 T 210 50 T 290 50" stroke="#E63946" stroke-width="3" fill="transparent"/>
+  <text x="20" y="45" font-size="28" font-family="'Playfair Display', serif" fill="#111">Bhargav</text>
+  <text x="20" y="68" font-size="14" font-family="Inter, sans-serif" fill="#555">Bhalekar</text>
+</svg>
